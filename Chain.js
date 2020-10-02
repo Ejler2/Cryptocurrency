@@ -13,3 +13,9 @@ class Block{
         return SHA256(this.index, this.tid, this.data, JSON.stringify(this.data)).toString();
     }
 }
+
+class Chain{
+    constructor(){
+        this.
+    }
+}
