@@ -14,8 +14,16 @@ class Block{
     }
 }
 
-class Chain{
+class blockChain{
     constructor(){
-        this.
+        this.Chain = [this.createGenisisBlock()];
+    }
+
+    createGenisisBlock(){
+        return new Block(0, 07/10/2020, "Genesis block", "0")
+    }
+
+    getLastBlock(){
+        return this.chain[this.chain.length - 1];
     }
 }
