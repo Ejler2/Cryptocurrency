@@ -32,6 +32,7 @@ class blockChain{
         newBlock.hash = newBlock.genererhash();
         this.Chain.push(newBlock);
     }
+    
 }
 
 let sæl = new blockChain();
@@ -39,3 +40,29 @@ sæl.addBlock(new Block(1, "1/1/2020", {amount: 4}));
 sæl.addBlock(new Block(2, "1/10/2020", {amount: 10}));
 
 console.log(JSON.stringify(sæl, null, 4));
+
+//funktion til html Dom (laver en ny block)
+
+var http = require('http');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end(console.log(JSON.stringify(sæl, null, 4)));
+}).listen(8080);
+
+
+function Lavblock(){ //3 inputs til data
+    let nr = 3;
+    let date = GetElementById("date").value;
+    let amount = GetElementById("amount").value;
+
+    console.log(date);
+    console.log(amount);
+
+
+sæl.addBlock(new Block(nr, date, {amount: (amount)}));
+    nr += 1;    
+
+console.log("hey");
+}
+
